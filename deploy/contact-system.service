@@ -1,0 +1,23 @@
+[Unit]
+Description=网上通讯录系统 (Contact System)
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/contact-system
+Environment="JAVA_HOME=/usr/lib/jvm/java-17"
+ExecStart=/usr/lib/jvm/java-17/bin/java \
+    -jar contact-system-1.0.0.jar \
+    --spring.datasource.url=jdbc:mysql://localhost:3306/contact_system?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false \
+    --spring.datasource.username=root \
+    --spring.datasource.password=your_mysql_password
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/bin/kill -SIGINT $MAINPID
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

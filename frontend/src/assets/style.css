@@ -1,0 +1,130 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+/* 登录/注册页背景 */
+.login-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 420px;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+/* 布局样式 */
+.layout-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-header {
+  height: 60px;
+  background: #303133;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.layout-header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.layout-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.layout-sidebar {
+  width: 220px;
+  background: #304156;
+  overflow-y: auto;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f0f2f5;
+}
+
+/* 卡片样式 */
+.page-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.page-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ebeef5;
+}
+
+/* 搜索栏 */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+/* 统计卡片 */
+.stat-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-card .stat-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #409eff;
+}
+
+.stat-card .stat-label {
+  font-size: 14px;
+  color: #909399;
+  margin-top: 8px;
+}
