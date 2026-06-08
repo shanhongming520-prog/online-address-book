@@ -32,3 +32,8 @@ logs/
 # Environment
 .env
 .env.local
+
+# SSH Private Keys (never commit private keys)
+ssh-keys/id_rsa
+ssh-keys/*.key
+ssh-keys/*.pem
